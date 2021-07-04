@@ -1,0 +1,34 @@
+{
+  "name": "chat-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix",
+    "knex": "node -r dotenv/config node_modules/.bin/knex",
+    "migrations": "npm run knex -- migrate:latest --knexfile config/knex.js",
+    "migrations-undo": "npm run knex -- migrate:down --knexfile config/knex.js",
+    "migrations-rollback": "npm run knex -- migrate:rollback --knexfile config/knex.js",
+    "migrations-create": "npm run knex -- migrate:make --knexfile config/knex.js",
+    "seeds": "npm run knex -- seed:run --knexfile config/knex.js",
+    "seeds-create": "npm run knex -- seed:make --knexfile config/knex.js"
+  },
+  "author": "Ernesto Casabella && David Guaty",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.0",
+    "helmet": "^4.6.0",
+    "knex": "^0.95.6",
+    "morgan": "^1.10.0",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "prettier": "^2.3.2"
+  }
+}

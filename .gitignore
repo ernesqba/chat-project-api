@@ -1,0 +1,8 @@
+# VSC Settings
+.vscode
+
+# Dependecies
+node_modules
+
+# Env file
+.env
