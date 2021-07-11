@@ -5,8 +5,8 @@ exports.up = (knex) => knex.schema.createTable(TABLE_NAME, (table) => {
   table.string('message').notNullable();
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now()).notNullable();
   table.timestamp('updated_at');
-  table.integer('users_message');
-  table.foreign('users_message')
+  table.integer('user_message');
+  table.foreign('user_message')
     .references('id')
     .inTable('users')
     .onDelete('SET NULL');
