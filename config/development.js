@@ -3,7 +3,7 @@ exports.config = {
   isDevelopment: true,
   common: {
     database: {
-      database: process.env.DB_NAME_DEV
-    }
-  }
+      database: process.env.DB_NAME_DEV,
+    },
+  },
 };
